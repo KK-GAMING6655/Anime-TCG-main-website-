@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime TCG Bot - Collect, Trade & Battle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-shield-cat logo-icon"></i>
+            <span>Anime<span class="gradient-text">TCG</span></span>
+        </div>
+
+        <div class="nav-actions">
+            <a href="https://your-website-link.vercel.app" target="_blank" class="btn btn-outline">
+                <i class="fas fa-globe"></i> <span>Open web mode</span>
+            </a>
+
+            <a href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot" target="_blank" class="btn btn-gradient">
+                <i class="fab fa-discord"></i> <span>Add bot</span>
+            </a>
+
+            <button id="menu-btn" class="menu-btn" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="menu-overlay" class="menu-overlay">
+        <div class="menu-content">
+            <button id="close-menu-btn" class="close-menu-btn"><i class="fas fa-times"></i></button>
+            <div class="menu-header">
+                <h3>Navigation</h3>
+            </div>
+            <ul class="menu-links">
+                <li>
+                    <a href="https://discord.gg/YOUR_SUPPORT_SERVER" target="_blank" id="menu-support">
+                        <i class="fab fa-discord"></i> Support Server
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="menu-commands">
+                        <i class="fas fa-terminal"></i> Bot Commands
+                    </a>
+                </li>
+                <li>
+                    <a href="https://top.gg/bot/YOUR_BOT_ID/vote" target="_blank" id="menu-vote">
+                        <i class="fas fa-vote-yea"></i> Vote on Top.gg
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <main>
+        <section id="home-page" class="page-view active">
+            <div class="hero">
+                <div class="hero-badge"><i class="fas fa-star"></i> The Ultimate Discord Anime Card Game</div>
+                <h1 class="hero-title">Collect, Trade & Battle Your Favorite <span class="gradient-text">Anime Legends</span></h1>
+                <p class="hero-subtitle">Summon thousands of rare cards, build your dream deck, trade with a global market, and dominate the leaderboard!</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&permissions=8&scope=bot" target="_blank" class="btn btn-gradient btn-lg">
+                        <i class="fab fa-discord"></i> Add to Discord
+                    </a>
+                    <button id="hero-commands-btn" class="btn btn-outline btn-lg">
+                        <i class="fas fa-list-check"></i> View Commands
+                    </button>
+                </div>
+            </div>
+
+            <div class="features-section">
+                <h2 class="section-title">Bot <span class="gradient-text">Features</span></h2>
+                <div class="features-grid">
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-box-open"></i></div>
+                        <h3>Gacha Pulls & Drop Events</h3>
+                        <p>Pull cards across multiple rarities—from Common to Super Legendary—or snatch rare live drops in your server!</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-store"></i></div>
+                        <h3>Global Marketplace</h3>
+                        <p>List your duplicate cards for sale or buy rare finds from players across thousands of Discord servers.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-coins"></i></div>
+                        <h3>Dynamic Economy</h3>
+                        <p>Earn coins through daily rewards, active chatting, begging, coin flipping, and burning excess cards.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                        <h3>Leaderboards & Stats</h3>
+                        <p>Calculate your card collection points and compete for the top rank on global leaderboards.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3>Web Portal Integration</h3>
+                        <p>Sync your Discord profile with our web portal using `/login` to view and manage your inventory anywhere.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-fire"></i></div>
+                        <h3>Card Burning & Trades</h3>
+                        <p>Burn unwanted cards for instant cash returns or set up direct 1-on-1 card trades with other players.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="commands-page" class="page-view">
+            <div class="commands-header">
+                <button id="back-home-btn" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </button>
+                <h1 class="section-title">Bot <span class="gradient-text">Commands</span></h1>
+                <p class="commands-subtitle">Explore all available slash commands and their functions.</p>
+            </div>
+
+            <div class="commands-grid">
+                <div class="command-card">
+                    <div class="cmd-name"><code>/gacha</code></div>
+                    <p class="cmd-desc">Pull a single random card using your coins.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/bulk_gacha</code></div>
+                    <p class="cmd-desc">Pull multiple cards at once to quickly expand your collection.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/daily</code></div>
+                    <p class="cmd-desc">Claim your daily coin reward every 24 hours.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/beg</code></div>
+                    <p class="cmd-desc">Ask for a small sum of free coins when you're broke.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/cointoss</code></div>
+                    <p class="cmd-desc">Gamble your coins on a heads or tails coin flip.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/view_card</code></div>
+                    <p class="cmd-desc">Inspect details, artwork, value, and owners of a specific card.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/card_list</code></div>
+                    <p class="cmd-desc">Browse through all cards registered in the bot.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/card_leaderboard</code></div>
+                    <p class="cmd-desc">View global player rankings based on total collection points.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/inventory</code></div>
+                    <p class="cmd-desc">View and scroll through your personal card collection.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/balance</code></div>
+                    <p class="cmd-desc">Check your current coin balance.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/user_inventory</code></div>
+                    <p class="cmd-desc">Inspect another member's card collection (if public).</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/user_balance</code></div>
+                    <p class="cmd-desc">Check another member's coin balance (if public).</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/login</code></div>
+                    <p class="cmd-desc">Generate your Web Portal credentials to log in on the website.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/burn</code></div>
+                    <p class="cmd-desc">Convert duplicate cards into coins instantly.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/market</code></div>
+                    <p class="cmd-desc">Browse cards currently listed for sale on the global market.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/market_sell</code></div>
+                    <p class="cmd-desc">Put one of your cards up for sale on the global market.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/market_remove</code></div>
+                    <p class="cmd-desc">Cancel your card listing and retrieve it from the market.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/rarity_list</code></div>
+                    <p class="cmd-desc">Check all card rarities, custom colors, and drop chances.</p>
+                </div>
+
+                <div class="command-card">
+                    <div class="cmd-name"><code>/help</code></div>
+                    <p class="cmd-desc">Open the interactive help menu with guides and details.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Anime TCG Bot. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
